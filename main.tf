@@ -33,18 +33,18 @@ filename = var.key_name
 
 
 resource "aws_instance" "public_instance" {
- 
-   ami  =  "ami-03f4878755434977f"
+
+  ami  =  "ami-03f4878755434977f"
   instance_type = "t3.micro"
   key_name = aws_key_pair.key_pair.key_name
-
+ 
   tags = {
     Name = "public_instance"
   }
 }
 
 # Adding Security groups
-
+/*
 
 resource "aws_security_group" "tf_sg" {
   name        = "Security group using Terraform"
@@ -93,6 +93,7 @@ ingress {
   }
 }
 
+*/
 
 
 
